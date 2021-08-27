@@ -234,7 +234,7 @@ width: 100%;
 .lg{
 	display: none;
 }
-@media (max-width:  767px) {
+@media (max-width:  967px) {
 	.menu_icon{
 		z-index: 5;
 		display: block;
