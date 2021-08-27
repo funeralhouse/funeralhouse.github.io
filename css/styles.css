@@ -11,15 +11,14 @@
 	text-decoration: none;
 	color: #c5ac84;
 }*/
-.header__marg {
-	text-align: center;
-	padding-top: 10px;
-	max-width: 90%;
-	margin: 0px auto;
+
+body {
+	margin: 0;
 }
-.header {
+.menu__body {
+	/*flex: 1 1 auto;*/
 	box-shadow: 2px 0 4px 2px rgba(0,0,0,.15);
-	z-index: 1000;
+	z-index: 4;
 	background:#303440;
 	background-size: 40px;
 	margin: 0;
@@ -28,12 +27,8 @@
 	width: 250px;
 	height: 100%;
 	position: fixed;
-}
-body {
-	margin: 0;
-}
-.menu__body {
-	/*flex: 1 1 auto;*/
+	text-align: center;
+
 }
 .menu__list {
 	/*display: flex;*/
@@ -80,7 +75,7 @@ padding: 10px;
 	top: 35%;
 	/*padding-left: 70px;*/
 	padding: calc(10% - 70px);
-	z-index: 99;
+	z-index: 3;
 	color: #c5ac84;
 }
 .info{
@@ -232,4 +227,101 @@ width: 100%;
 }
 .image-log__logo {
 	width: 187px;
+}
+.menu_icon {
+	display: none;
+}
+.lg{
+	display: none;
+}
+@media (max-width:  767px) {
+	.menu_icon{
+		z-index: 5;
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+	}
+	.menu_icon span,
+	.menu_icon::before,
+	.menu_icon::after {
+		left: 0;
+		position: absolute;
+		height: 10%;
+		width: 100%;
+		transition: all 0.3s ease 0s;
+		background-color: rgb(197, 172, 132);
+	}
+	.menu_icon::before,
+	.menu_icon::after {
+		content: "";
+	}
+	.menu_icon::before{
+		top: 0;
+	}
+	.menu_icon::after{
+		bottom: 0;
+	}
+	.menu_icon span{
+		top: 45%;
+		transform: scale(1); translate(0px,-45%);
+		}
+
+	.telephone__logos{
+		width: 90px;
+		z-index: 5;
+	}
+	.logo__img{
+		display: none;
+	}
+	.menu__body{
+		position: fixed;
+		top: -9%;
+		left: -1000%;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(30, 34, 40,0.9);
+		padding: 60px 30px 0px 90%;
+		transition: left 0.3s ease 0s;
+		text-align: left;
+		overflow: auto;
+}
+.menu__body._active{
+	left: 0;
+}
+.lg{
+	display: block;  
+	margin-top: 2%;
+ margin-left:5%;
+ position: fixed;
+ z-index: 5;
+}
+	.menu{
+		position: fixed;
+		top: -9%;
+		left: 0;
+padding: 60px 30px 0px 90%;
+z-index: 5;
+	}
+	.menu__body::before{
+		content: "";
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 60px;
+		background-color:#303440;
+		z-index: 2;
+	}
+	.menu__list{
+		margin-top: 10%;
+		margin-left: -93%;
+}
+	.menu__link{
+		font-size: 15px;
+	}
+ .body__column{
+ 	margin: 0;
+ }
 }
